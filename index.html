@@ -1,27 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>テストプレイお願いします</title>
-    <meta name="color-scheme" content="dark light" />
-    <link rel="stylesheet" href="style.css" />
+    <title>NAZOTOKI STAGE</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main id="app" class="app">
-      <header class="app-header">
-        <div class="title">テストプレイお願いします</div>
-        <div class="subtitle">テストプレイお願いします</div>
-      </header>
+    <header class="header">
+      <h1 class="title">NAZOTOKI STAGE</h1>
+      <div class="header-right">
+        <nav class="tabs" aria-label="ステージ切替">
+          <button class="tab active" data-stage="1ST">1ST</button>
+          <button class="tab" data-stage="2ND">2ND</button>
+          <button class="tab" data-stage="3RD">3RD</button>
+          <button class="tab" data-stage="LAST">LAST</button>
+        </nav>
+        <div class="zoom" aria-label="ズーム">
+          <label for="zoomRange">Zoom</label>
+          <input id="zoomRange" type="range" min="50" max="200" step="5" value="100" />
+          <span id="zoomLabel">100%</span>
+        </div>
+      </div>
+    </header>
 
-      <section id="flow" class="flow" aria-live="polite"></section>
+    <div class="app">
+      <aside class="palette" aria-label="素材パネル">
+        <div class="palette-header">素材（クリックで追加）</div>
+        <div id="paletteList" class="palette-list" aria-live="polite"></div>
+        <div class="palette-footer" id="paletteHint"></div>
+      </aside>
 
-      <footer class="app-footer">
-        <div class="hint">Enter で送信 / ひらがなで入力</div>
-      </footer>
-    </main>
+      <main class="board-area" aria-label="ステージエリア">
+        <div id="stage-1ST" class="stage-board active" data-stage="1ST" tabindex="0" aria-label="1ST ステージ">
+          <div class="board-inner"></div>
+        </div>
+        <div id="stage-2ND" class="stage-board" data-stage="2ND" tabindex="0" aria-label="2ND ステージ">
+          <div class="board-inner"></div>
+        </div>
+        <div id="stage-3RD" class="stage-board" data-stage="3RD" tabindex="0" aria-label="3RD ステージ">
+          <div class="board-inner"></div>
+        </div>
+        <div id="stage-LAST" class="stage-board" data-stage="LAST" tabindex="0" aria-label="LAST ステージ">
+          <div class="board-inner"></div>
+        </div>
+      </main>
+    </div>
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
   </body>
   </html>
-
