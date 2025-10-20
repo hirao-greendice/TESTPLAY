@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const STAGES = ['1ST', '2ND', '3RD', 'LAST'];
+  const STAGES = ['1ST', '2ND', '3RD', 'LAST', 'X'];
   let currentStage = '1ST';
   let zCounter = 1;
   let scale = 1; // global zoom scale for all boards
@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (/^(2|2nd)/.test(n)) return '2ND';
     if (/^(3|3rd)/.test(n)) return '3RD';
     if (/^(4|4th|last|final)/.test(n)) return 'LAST';
+    if (/^(x)/.test(n)) return 'X';
     return null;
   }
 

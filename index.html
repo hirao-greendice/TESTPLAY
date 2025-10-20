@@ -15,6 +15,7 @@
           <button class="tab" data-stage="2ND">2ND</button>
           <button class="tab" data-stage="3RD">3RD</button>
           <button class="tab" data-stage="LAST">LAST</button>
+          <button class="tab" data-stage="X">X</button>
         </nav>
         <div class="zoom" aria-label="ズーム">
           <label for="zoomRange">Zoom</label>
@@ -44,9 +45,36 @@
         <div id="stage-LAST" class="stage-board" data-stage="LAST" tabindex="0" aria-label="LAST ステージ">
           <div class="board-inner"></div>
         </div>
+        <div id="stage-X" class="stage-board" data-stage="X" tabindex="0" aria-label="X ステージ">
+          <div class="board-inner"></div>
+        </div>
       </main>
     </div>
 
+    <script>
+      // GitHub Pages ではディレクトリ一覧が取得できないため、静的に埋め込み
+      window.ASSETS = [
+        { name: "1A.png", path: "image/1A.png" },
+        { name: "1AnswerSheet.png", path: "image/1AnswerSheet.png" },
+        { name: "1B.png", path: "image/1B.png" },
+        { name: "1C.png", path: "image/1C.png" },
+        { name: "1D.png", path: "image/1D.png" },
+        { name: "2A.png", path: "image/2A.png" },
+        { name: "2AnswerSheet.png", path: "image/2AnswerSheet.png" },
+        { name: "2B.png", path: "image/2B.png" },
+        { name: "2C.png", path: "image/2C.png" },
+        { name: "2D.png", path: "image/2D.png" },
+        { name: "3A.png", path: "image/3A.png" },
+        { name: "3AnswerSheet.png", path: "image/3AnswerSheet.png" },
+        { name: "3B.png", path: "image/3B.png" },
+        { name: "3C.png", path: "image/3C.png" },
+        { name: "3D.png", path: "image/3D.png" },
+        { name: "LastAnswerSheet.png", path: "image/LastAnswerSheet.png" },
+        { name: "XAnswerSheet.png", path: "image/XAnswerSheet.png" },
+        { name: "X1.png", path: "image/X1.png" },
+        { name: "X2.png", path: "image/X2.png" }
+      ];
+    </script>
     <script src="script.js"></script>
   </body>
   </html>
